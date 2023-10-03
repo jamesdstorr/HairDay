@@ -1,0 +1,278 @@
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 2fr 1fr auto;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: top;
+}
+
+h3{
+    color: #d0604c;
+}
+
+.col-12 {
+    grid-column: auto / span 12;
+}
+
+.col-12-carousel {
+    margin-top: 1rem;
+    grid-column: auto / span 12;
+    display: flex;
+    justify-content: center;
+}
+
+.col-12-promotion {
+    grid-column: auto / span 12;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.col-12-promotion h2 {
+    text-align: center;
+    color: #d0604c;
+}
+
+.col-12-promotion p {
+    text-align: center;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 70vw;
+    height: 60vw;
+    max-width: 600px;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeInOut 20s infinite;
+    opacity: 0;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel-slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.carousel-slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+header>img {
+    display: flex;
+    flex: 1 1 auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #d0604c;
+    border-bottom: 2px solid #d0604c;
+
+    margin-top: 1rem;
+}
+
+nav ul {
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    flex: 1 1 auto;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: #d0604c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a:active {
+    color: #d0604c;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #d0604c;
+}
+
+nav a:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+.col-4 {
+    grid-column: auto / span 12;
+    justify-content: center;
+}
+
+
+
+.styling_info {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col-4 h3 {
+    text-align: center;
+}
+
+.styling_column{
+    display: flex;   
+    flex-direction: column; 
+}
+
+.styling_info li {
+    list-style-type: none;
+}
+
+
+
+.styling_header {
+    grid-column: auto / span 12;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width:850px) {
+    .carousel-container {
+        width: 40vw;
+        height: 30vw;
+
+    }
+
+    .col-4 {
+        grid-column: auto / span 4;
+        flex-direction: row;
+    }
+
+   
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 1rem;
+
+    }
+
+    
+    .col-4:nth-of-type(4) .styling_info {
+        border-left: 1px solid #d0604c;
+        border-right: 1px solid #d0604c;
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #promotion {
+        width: 50%;
+        border: solid 1px #d0604c;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #promotion a {
+
+        transition: font-size ease-in-out .1s;
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    #promotion a:hover {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        margin-top:1rem;
+        
+        
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin-left: 25%;
+        margin-right: 25%;
+        
+    }
+
+    .footer-col{
+            
+            grid-column: auto / span 6;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            align-items: center;
+    }
+
+     i{
+        
+        font-size:2em;   
+     }
+
+
+}
