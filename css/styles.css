@@ -124,10 +124,10 @@ h3 {
 header>a>img {
     display: flex;
     flex: 1 1 auto;
-    width: 50%;
     margin-left: auto;
     margin-right: auto;
     min-height: 1rem;
+    max-height:10rem
 }
 
 nav {
@@ -167,9 +167,15 @@ a:visited {
     color: #d0604c;
 }
 
+nav a {
+    
+    transition: 0.2s ease-out;
+}
+
 nav a:hover {
-    color: black;
-    font-weight: bolder;
+    
+    
+    color:black;
 }
 
 .col-4 {
@@ -248,8 +254,8 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 20%;
+        margin-right: 20%;
         margin-top: 1rem;
 
     }
